@@ -1,6 +1,6 @@
 # Hugo theme Paliacate
 
-A simple Hugo theme used in [my photography site](https://fotos.quiroptero.blog).
+A simple Hugo theme used in [my photography site](https://paliacate.quiroptero.blog).
 
 Inspired and (kind of) based on [Benjamin Eskola's photo site](https://photos.eskola.uk/)
 and the [Hugo theme ananke](https://github.com/theNewDynamic/gohugo-theme-ananke).
