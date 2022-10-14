@@ -1,0 +1,19 @@
+{{ define "main" }}
+  {{ $section := .Site.GetPage "section" .Section }}
+  <article>
+    <header class="mt4 w-100">
+      <h1 class="f1 athelas mt3 mb1">
+        {{- .Title -}}
+      </h1>
+      {{ if not .Date.IsZero }}
+        <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+          {{- .Date | time.Format (default "January 02, 2006" .Site.Params.date_format) -}}
+        </time>
+      {{end}}
+    </header>
+
+    <div class="div-post">
+      {{- .Content -}}
+    </div>
+  </article>
+{{ end }}
