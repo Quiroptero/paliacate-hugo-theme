@@ -40,6 +40,9 @@
         <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
       {{ end }}
     {{ end }}
+
+    {{/* Extend head */}}
+    {{ partial "extend_head.html" }}
   </head>
 
   <body>
