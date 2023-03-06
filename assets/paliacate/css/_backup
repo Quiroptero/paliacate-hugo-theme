@@ -1,0 +1,123 @@
+/*
+body {
+	font-family: "Inconsolata", monospace;
+	background-color: rgb(29, 30, 32);
+	color: rgb(229,229,229);
+    min-height: 100vh;
+	margin-left: 2em;
+	margin-right: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+a, a:visited, a:hover, a:active {
+	color: rgb(229,229,229);
+}
+
+main {
+    flex-grow: 1;
+}
+
+main img {
+	max-width: 100%;
+	padding: 1em;
+    max-width: 90%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+figure {
+    margin: auto;
+}
+
+figcaption {
+    font-size: 1.8vmin;
+    display: flex;
+		flex-flow: column;
+    justify-content: space-between;
+    height: auto;
+		max-width: 90%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0rem !important;
+    caption-side: bottom;
+    padding: 0px 0px 20px 0px;
+}
+
+div.figca {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.menu-nav {
+    font-size: 2.5vmin;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+	max-width: 100%;
+    padding: 0px 0px 20px 0px;
+}
+
+#footer {
+    height: 50px;
+}
+
+div.div-footer {
+    font-size: 2.2vmin;
+    display: block;
+	max-width: 100%;
+    padding: 0px 0px 20px 0px;
+    margin-top: auto;
+    height: 10%
+}
+
+p.photo_settings{
+    align-text: right;
+}
+
+p.photo_location{
+    align-text: left;
+}
+
+body nav {
+    font-size: 1rem;
+    height: 3rem;
+    padding: 20px 0px 0px 0px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+nav li img {
+	width: 450px;
+	height: 450px;
+	padding: 3px;
+}
+
+li {
+	border: 1px solid transparent;
+	display: inline-block;
+}
+
+.copyright {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 800px) {
+	main img {
+		max-width: 95%;
+	}
+}
+
+@media only screen and (max-width: 476px) {
+	nav li img {
+		width: 95%;
+		height: unset;
+	}
+}
+*/

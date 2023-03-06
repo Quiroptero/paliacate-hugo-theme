@@ -1,63 +1,39 @@
+/* Main body */
 body {
 	font-family: "Inconsolata", monospace;
 	background-color: rgb(29, 30, 32);
+	/* Color of main text */
 	color: rgb(229,229,229);
-    min-height: 100vh;
+	/* Set a minimum height so that the footer will remain at the bottom in pages with few content */
+	min-height: 95vh;
+	/* Set a little padding at each side of the screen*/
 	margin-left: 2em;
 	margin-right: 2em;
 	display: flex;
 	flex-direction: column;
 }
 
+/* Set the color of links */
 a, a:visited, a:hover, a:active {
 	color: rgb(229,229,229);
 }
 
+/* Allow to adjust the different elements on screen */
 main {
     flex-grow: 1;
 }
 
-main img {
-	max-width: 100%;
-	padding: 1em;
-    max-width: 90%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-figure {
-    margin: auto;
-}
-
-figcaption {
-    font-size: 1.8vmin;
-    display: flex;
-		flex-flow: column;
-    justify-content: space-between;
-    height: auto;
-		max-width: 90%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 0rem !important;
-    caption-side: bottom;
-    padding: 0px 0px 20px 0px;
-}
-
-div.figca {
-    display: flex;
-    justify-content: space-between;
-}
-
+/* The style of the navigation menu (i.e. title and links - header) */
 div.menu-nav {
     font-size: 2.5vmin;
     display: flex;
     justify-content: space-between;
     height: auto;
-	max-width: 100%;
+		max-width: 100%;
     padding: 0px 0px 20px 0px;
 }
 
+/* Footer style*/
 #footer {
     height: 50px;
 }
@@ -65,57 +41,310 @@ div.menu-nav {
 div.div-footer {
     font-size: 2.2vmin;
     display: block;
-	max-width: 100%;
+		max-width: 100%;
     padding: 0px 0px 20px 0px;
     margin-top: auto;
     height: 10%
 }
 
-p.photo_settings{
-    align-text: right;
+/* Container for the landing page, it works as archive */
+.container {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); /* Responsive grid layout */
 }
 
-p.photo_location{
-    align-text: left;
+/* IMAGE HANDLING */
+/* Based on Daniel Dickinson's work */
+/* https://github.com/danielfdickinson/image-handling-mod-hugo-dfd/blob/main/README-assets/sample.css */
+
+/* figcaption {
+    font-style: italic;
+} */
+
+#via-markdown ~ p img {
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+    max-width: 100%;
 }
 
-body nav {
+#via-markdown ~ p span {
+    display: block;
+    margin-top: .4em;
+}
+
+#via-markdown ~ p span span {
+    display: block;
+    margin-top: .4em;
+}
+
+.responsive-thumbnail {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.responsive-figure img {
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+.responsive-figure figcaption h2 {
     font-size: 1rem;
-    height: 3rem;
-    padding: 20px 0px 0px 0px;
 }
 
-ul {
-	list-style: none;
-	padding: 0;
-	text-align: center;
+.responsive-figure figcaption p {
+    font-size: .875rem;
 }
 
-nav li img {
-	width: 450px;
-	height: 450px;
-	padding: 3px;
+.responsive-figure.fullwidth img {
+    height: auto;
+    width: 100%;
+    max-height: unset;
 }
 
-li {
-	border: 1px solid transparent;
-	display: inline-block;
+.responsive-figure-originalheight {
+    display: block;
+    margin: 0;
+    overflow: visible;
 }
 
-.copyright {
-	margin-top: 2em;
-	margin-bottom: 2em;
+.responsive-figure-originalheight img {
+    box-sizing: content-box;
+    display: block;
+    margin: 0;
+    min-height: max-content;
+    min-width: max-content;
+    overflow: visible;
 }
 
-@media only screen and (max-width: 800px) {
-	main img {
-		max-width: 95%;
-	}
+.markdown-image-wrapper > span {
+    display: block;
+    margin-top: .4em;
 }
 
-@media only screen and (max-width: 476px) {
-	nav li img {
-		width: 95%;
-		height: unset;
-	}
+.markdown-image-wrapper img {
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+.responsive-div img {
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+.responsive-markdown img {
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+#markdown-thumbnail-test ~ p {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.thumbnail-markdown {
+    display: inline-block;
+}
+
+.thumbnail-markdown span span {
+    display: none;
+}
+
+.thumbnail-figure figcaption {
+    display: none;
+}
+
+.thumbnail-figure {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.main-test-min [id|="dfd-hugo-image-handling-module"] ~ #examples ~ [id|="result"] + p {
+    background-color: black;
+    display: block;
+    line-height: 1;
+    width: 100%;
+}
+
+.main-test-min [id|="dfd-hugo-image-handling-module"] ~ #examples ~ [id|="result"] + p img {
+    background-color: whitesmoke;
+    border: 2px solid black;
+    height: auto;
+    opacity: .75;
+    padding: .4em;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #markdown-thumbnail-test ~ p {
+        display: block;
+        margin-right: revert;
+    }
+
+    .thumbnail-markdown {
+        display: revert;
+    }
+
+    .thumbnail-markdown span span {
+        display: block;
+    }
+
+    .thumbnail-figure figcaption {
+        display: block;
+    }
+
+    .thumbnail-figure {
+        display: block;
+        margin-right: revert;
+    }
+}
+
+.metadata-images-wrapper {
+    margin: inherit;
+    width: 100%;
+}
+
+.metadata-image-wrapper {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.metadata-image {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.featured-image-flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.featured-image-thumbnail-article {
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+.featured-image-thumbnail-wrapper {
+    display: block;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.featured-image-thumbnail-link {
+    display: block;
+}
+
+.featured-image-thumbnail {
+    display: block;
+    height: auto;
+    max-height: 9em;
+    max-width: 100%;
+    width: auto;
+}
+
+.featured-image-header {
+    flex: 0 0 50%;
+    margin-bottom: 1em;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    z-index: 0;
+}
+
+.featured-image-wrapper {
+    display: block;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.featured-image-link {
+    display: block;
+}
+
+.featured-image {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .featured-image-flex-wrapper {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .featured-image-thumbnail-article {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .featured-image-header {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .featured-image-wrapper {
+        margin-top: 1em;
+        position: relative;
+    }
+
+    .featured-image {
+        height: auto;
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .featured-image-header {
+        height: 70vh;
+    }
+
+    .featured-image-wrapper {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .featured-image {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .featured-image:not([src*=".svg"]) {
+        height: max-content;
+    }
+
+    .featured-image[src*=".svg"] {
+        height: auto;
+    }
+
+    .featured-image-link {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#frontmatter-images ~ .highlight {
+    min-width: revert;
+}
+
+#frontmatter-images ~ .highlight pre {
+    min-width: revert;
+    white-space: pre-wrap;
 }
