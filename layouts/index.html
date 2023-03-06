@@ -1,23 +1,13 @@
 {{ define "main" }}
-<div class="index">
-    <ul>
+<div class="container">
     {{ range (where .Site.RegularPages "Section" "==" "posts") }}
-        <li>
-            {{ $image := .Page.Resources.GetMatch (.Page.Params.Get "featured_image") }}
-            {{ $image := $image.Fill "450x450 png q100" }}
-            <a href="{{ .RelPermalink }}" title="{{ .Title }}">
-                <img src="{{ $image.RelPermalink }}" class="img" alt="image from {{ $image.Title }}">
-            </a>
-            {{/*
-                {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
-                {{ if $featured_image }}
-                    <a href="{{ .RelPermalink }}" title="{{ .Title }}">
-                        <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}" width=450, height=450>
-                    </a>
-                {{ end }}
-             */}}
-        </li>
+    <div class="item">
+        {{ $image := .Page.Resources.GetMatch (.Page.Params.Get "featured_image") }}
+        {{ $image := $image.Fill "125x125 png q100" }}
+        <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+            <img src="{{ $image.RelPermalink }}" class="img" alt="image from {{ $image.Title }}">
+        </a>
+    </div>
     {{ end }}
-    </ul>
 </div>
 {{ end }}
