@@ -1,3 +1,9 @@
+# 0.1.2 Change color for links, timestamps and background
+
+Previous colors:
+* links: RGB(229,229,229)
+* background: RGB(29, 30, 32)
+
 # 0.1.1 Change the landing page to a grid layout
 
 The following non breaking changes were applied:

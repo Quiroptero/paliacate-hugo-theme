@@ -1,7 +1,7 @@
 /* Main body */
 body {
 	font-family: "Inconsolata", monospace;
-	background-color: rgb(29, 30, 32);
+	background-color: rgb(20,20,20);
 	/* Color of main text */
 	color: rgb(229,229,229);
 	/* Set a minimum height so that the footer will remain at the bottom in pages with few content */
@@ -15,7 +15,12 @@ body {
 
 /* Set the color of links */
 a, a:visited, a:hover, a:active {
-	color: rgb(229,229,229);
+	color: rgb(243,137,84);
+}
+
+/* Set the color of timestamps */
+.f6 {
+	color: rgb(100,100,100);
 }
 
 /* Allow to adjust the different elements on screen */
