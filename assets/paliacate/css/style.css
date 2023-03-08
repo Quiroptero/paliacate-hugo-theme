@@ -92,15 +92,18 @@ div.div-footer {
 .responsive-figure img {
     height: auto;
     width: auto;
-    max-height: 50vh;
+    max-height: 95vh;
     max-width: 100%;
+		display: flex;
+		margin: auto;
 }
 
-.responsive-figure figcaption h2 {
-    font-size: 1rem;
+.responsive-figure figcaption {
+		display: flex;
+		justify-content: center;
 }
 
-.responsive-figure figcaption p {
+.responsive-figure figcaption span {
     font-size: .875rem;
 }
 
