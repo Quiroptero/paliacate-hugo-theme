@@ -7,10 +7,11 @@ body {
 	/* Set a minimum height so that the footer will remain at the bottom in pages with few content */
 	min-height: 95vh;
 	/* Set a little padding at each side of the screen*/
-	margin-left: 2em;
-	margin-right: 2em;
+	margin-left: 1em;
+	margin-right: 1em;
 	display: flex;
 	flex-direction: column;
+	width: 100vw;
 }
 
 /* Set the color of links */
@@ -24,18 +25,18 @@ a, a:visited, a:hover, a:active {
 }
 
 /* Allow to adjust the different elements on screen */
-main {
+/* main {
     flex-grow: 1;
-}
+} */
 
 /* The style of the navigation menu (i.e. title and links - header) */
 div.menu-nav {
     font-size: 2.5vmin;
     display: flex;
+		flex-direction: row;
     justify-content: space-between;
     height: auto;
-		max-width: 100%;
-    padding: 0px 0px 20px 0px;
+		width: 90vw;
 }
 
 /* Footer style*/
@@ -89,13 +90,26 @@ div.div-footer {
     margin-right: 1em;
 }
 
+div.div-post {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 0 0 100%;
+}
+
 .responsive-figure img {
     height: auto;
     width: auto;
     max-height: 95vh;
-    max-width: 100%;
+    max-width: 100vw;
 		display: flex;
 		margin: auto;
+}
+
+/* Image links */
+.responsive-figure a {
+    color: rgb(150,150,150);
+		text-decoration: none;
 }
 
 .responsive-figure figcaption {
@@ -113,246 +127,5 @@ div.div-footer {
     max-height: unset;
 }
 
-.responsive-figure-originalheight {
-    display: block;
-    margin: 0;
-    overflow: visible;
-}
-
-.responsive-figure-originalheight img {
-    box-sizing: content-box;
-    display: block;
-    margin: 0;
-    min-height: max-content;
-    min-width: max-content;
-    overflow: visible;
-}
-
-.markdown-image-wrapper > span {
-    display: block;
-    margin-top: .4em;
-}
-
-.markdown-image-wrapper img {
-    height: auto;
-    width: auto;
-    max-height: 50vh;
-    max-width: 100%;
-}
-
-.responsive-div img {
-    height: auto;
-    width: auto;
-    max-height: 50vh;
-    max-width: 100%;
-}
-
-.responsive-markdown img {
-    height: auto;
-    width: auto;
-    max-height: 50vh;
-    max-width: 100%;
-}
-
-#markdown-thumbnail-test ~ p {
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.thumbnail-markdown {
-    display: inline-block;
-}
-
-.thumbnail-markdown span span {
-    display: none;
-}
-
-.thumbnail-figure figcaption {
-    display: none;
-}
-
-.thumbnail-figure {
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.main-test-min [id|="dfd-hugo-image-handling-module"] ~ #examples ~ [id|="result"] + p {
-    background-color: black;
-    display: block;
-    line-height: 1;
-    width: 100%;
-}
-
-.main-test-min [id|="dfd-hugo-image-handling-module"] ~ #examples ~ [id|="result"] + p img {
-    background-color: whitesmoke;
-    border: 2px solid black;
-    height: auto;
-    opacity: .75;
-    padding: .4em;
-    width: 100%;
-}
-
 @media screen and (max-width: 768px) {
-    #markdown-thumbnail-test ~ p {
-        display: block;
-        margin-right: revert;
-    }
-
-    .thumbnail-markdown {
-        display: revert;
-    }
-
-    .thumbnail-markdown span span {
-        display: block;
-    }
-
-    .thumbnail-figure figcaption {
-        display: block;
-    }
-
-    .thumbnail-figure {
-        display: block;
-        margin-right: revert;
-    }
-}
-
-.metadata-images-wrapper {
-    margin: inherit;
-    width: 100%;
-}
-
-.metadata-image-wrapper {
-    margin-bottom: 1em;
-    width: 100%;
-}
-
-.metadata-image {
-    display: block;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    max-width: 100%;
-}
-
-.featured-image-flex-wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-}
-
-.featured-image-thumbnail-article {
-    flex: 0 0 50%;
-    width: 50%;
-}
-
-.featured-image-thumbnail-wrapper {
-    display: block;
-    overflow: hidden;
-    z-index: 3;
-}
-
-.featured-image-thumbnail-link {
-    display: block;
-}
-
-.featured-image-thumbnail {
-    display: block;
-    height: auto;
-    max-height: 9em;
-    max-width: 100%;
-    width: auto;
-}
-
-.featured-image-header {
-    flex: 0 0 50%;
-    margin-bottom: 1em;
-    overflow: hidden;
-    position: relative;
-    width: 50%;
-    z-index: 0;
-}
-
-.featured-image-wrapper {
-    display: block;
-    overflow: hidden;
-    z-index: 3;
-}
-
-.featured-image-link {
-    display: block;
-}
-
-.featured-image {
-    display: block;
-}
-
-@media screen and (max-width: 768px) {
-    .featured-image-flex-wrapper {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .featured-image-thumbnail-article {
-        flex: 1 1 100%;
-        width: 100%;
-    }
-
-    .featured-image-header {
-        flex: 1 1 100%;
-        width: 100%;
-    }
-
-    .featured-image-wrapper {
-        margin-top: 1em;
-        position: relative;
-    }
-
-    .featured-image {
-        height: auto;
-        margin-bottom: 0;
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .featured-image-header {
-        height: 70vh;
-    }
-
-    .featured-image-wrapper {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .featured-image {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-    }
-
-    .featured-image:not([src*=".svg"]) {
-        height: max-content;
-    }
-
-    .featured-image[src*=".svg"] {
-        height: auto;
-    }
-
-    .featured-image-link {
-        height: 100%;
-        width: 100%;
-    }
-}
-
-#frontmatter-images ~ .highlight {
-    min-width: revert;
-}
-
-#frontmatter-images ~ .highlight pre {
-    min-width: revert;
-    white-space: pre-wrap;
 }
